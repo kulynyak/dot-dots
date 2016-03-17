@@ -1,0 +1,121 @@
+#!/bin/bash
+
+sudo -v
+
+# Update existing `sudo` time stamp until the script has finished.
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+# Make sure we’re using the latest Homebrew
+brew update
+
+# Upgrade any already-installed formulae
+brew upgrade --all
+
+# Install GNU core utilities (those that come with OS X are outdated)
+brew install coreutils
+
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed
+brew install findutils
+
+# Install GNU `sed`, overwriting the built-in `sed`
+brew install gnu-sed --with-default-names
+
+# Install `bash`
+brew install bash
+brew tap homebrew/versions
+brew install bash-completion2
+
+# Install `wget` with IRI support
+brew install wget --with-iri
+
+# Install more recent versions of some OS X tools
+brew install homebrew/dupes/grep
+brew install homebrew/dupes/openssh
+
+# Install git
+brew install git
+
+# Install vcprompt
+brew install vcprompt
+
+# Install grc
+brew install grc
+
+# Install cask
+brew install brew-cask
+
+# Install python
+brew install python
+brew install python3
+
+# Install fzf
+brew install fzf
+
+# Install fasd
+brew install fasd
+
+# Install httpie
+brew install httpie
+
+# Install 7-zip
+brew install p7zip
+
+# Install unrar
+brew install unrar
+
+# Install vim
+brew install vim
+
+# Install tmux
+brew install tmux
+brew install reattach-to-user-namespace
+brew pin tmux
+
+# Install Midnight Commander
+brew install midnight-commander
+
+# Install google-chrome
+brew cask install google-chrome
+
+# Install firefox
+brew cask install firefox
+
+# Install caffeine
+brew cask install caffeine
+
+# Install cheatsheet
+brew cask install cheatsheet
+
+# Install appcleaner
+brew cask install appcleaner
+
+# Install skype
+brew cask install skype
+
+# Install the_silver_searcher
+brew install the_silver_searcher
+
+# Install transmission
+brew cask install --force transmission
+
+# Install ssh-copy-id
+brew install ssh-copy-id
+
+# Terminal
+brew cask install iterm2
+
+# Seil
+brew cask install seil
+/Applications/Seil.app/Contents/Library/bin/seil set keycode_capslock 80
+
+# Karabiner
+brew cask install karabiner
+
+# Dropbox
+brew cask install dropbox
+
+# Google drive
+brew cask install google-drive
+
+# Remove outdated versions from the cellar
+brew cleanup

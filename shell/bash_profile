@@ -1,0 +1,17 @@
+export __OS__=$(uname)
+
+# gem
+export GEM_HOME="$HOME/.gem"
+export GEM_PATH=$GEM_HOME
+
+if [ "$__OS__" = "Darwin" ]; then
+  # java
+  export JAVA_HOME=$(/usr/libexec/java_home)
+else
+
+fi
+# ellipsis
+# export ELLIPSIS_HOME=${HOME}/ellipsis.home
+# export ELLIPSIS_PACKAGES=${HOME}/ellipsis/packages
+# path
+export PATH=.:~/.ellipsis/bin:$PATH
