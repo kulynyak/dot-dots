@@ -50,7 +50,15 @@ pkg.install() {
  pkg.pull() {
     # Update dot-tmux repo
     git.pull
-
+		# Update/install packages
+		case $(os.platform) in
+			osx)
+				osx
+				;;
+			linux)
+				linux
+				;;
+		esac
     # Clean and update plugins
     ellipsis-tpm clean
     ellipsis-tpm update
