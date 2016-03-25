@@ -1,5 +1,19 @@
 #!/bin/bash
 
+function bi() {
+  pkg="$1"
+  if ! brew list -1 | grep -q "^${pkg}\$"; then
+    brew install "$@"
+  fi
+}
+
+function bci() {
+  pkg="$1"
+  if ! brew cask list -1 | grep -q "^${pkg}\$"; then
+    brew cask install "$@"
+  fi
+}
+
 sudo -v
 
 # Update existing `sudo` time stamp until the script has finished.
@@ -12,110 +26,113 @@ brew update
 brew upgrade --all
 
 # Install GNU core utilities (those that come with OS X are outdated)
-brew install coreutils
+bi coreutils
 
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed
-brew install findutils
+bi findutils
 
 # Install GNU `sed`, overwriting the built-in `sed`
-# brew install gnu-sed --with-default-names
+# bi gnu-sed --with-default-names
 
 # Install `bash`
-brew install bash
+bi bash
 brew tap homebrew/versions
-brew install bash-completion2
+bi bash-completion2
 
 # Install `wget` with IRI support
-brew install wget --with-iri
+bi wget --with-iri
 
 # Install more recent versions of some OS X tools
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
+bi homebrew/dupes/grep
+bi homebrew/dupes/openssh
 
 # Install git
-brew install git
+bi git
 
 # Install vcprompt
-brew install vcprompt
+bi vcprompt
 
 # Install grc
-brew install grc
+bi grc
 
 # Install cask
-brew install brew-cask
+bi brew-cask
 
 # Install python
-brew install python
-brew install python3
+bi python
+bi python3
 
 # Install fzf
-brew install fzf
+bi fzf
 
 # Install fasd
-brew install fasd
+bi fasd
 
 # Install httpie
-brew install httpie
+bi httpie
 
 # Install 7-zip
-brew install p7zip
+bi p7zip
 
 # Install unrar
-brew install unrar
+bi unrar
 
 # Install vim
-brew install vim
+bi vim
 
 # Install tmux
-brew install tmux
-brew install reattach-to-user-namespace
+bi tmux
+bi reattach-to-user-namespace
 brew pin tmux
 
 # Install Midnight Commander
-brew install midnight-commander
+bi midnight-commander
 
 # Install google-chrome
-brew cask install google-chrome
+bci google-chrome
 
 # Install firefox
-brew cask install firefox
+bci firefox
 
 # Install caffeine
-brew cask install caffeine
+bci caffeine
 
 # Install cheatsheet
-brew cask install cheatsheet
+bci cheatsheet
 
 # Install appcleaner
-brew cask install appcleaner
+bci appcleaner
 
 # Install skype
-brew cask install skype
+bci skype
 
 # Install the_silver_searcher
-brew install the_silver_searcher
+bi the_silver_searcher
 
 # Install transmission
-brew cask install --force transmission
+bci --force transmission
 
 # Install ssh-copy-id
-brew install ssh-copy-id
+bi ssh-copy-id
 
 # Terminal
-brew cask install iterm2
+bci iterm2
 
 # Seil
-brew cask install seil
+bci seil
 /Applications/Seil.app/Contents/Library/bin/seil set keycode_capslock 80
 
 # Karabiner
-brew cask install karabiner
+bci karabiner
 
 # Dropbox
-brew cask install dropbox
+bci dropbox
 
 # Google drive
-brew cask install google-drive
+bci google-drive
 
 # Remove outdated versions from the cellar
 brew cleanup
+
+unset -f bci
+unset -f bi
