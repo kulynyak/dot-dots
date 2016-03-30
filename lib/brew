@@ -122,9 +122,6 @@ bci iterm2
 bci seil
 /Applications/Seil.app/Contents/Library/bin/seil set keycode_capslock 80
 
-# Karabiner
-bci karabiner
-
 # Dropbox
 bci dropbox
 
