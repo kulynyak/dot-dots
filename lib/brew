@@ -43,8 +43,8 @@ bi bash-completion2
 bi wget --with-iri
 
 # Install more recent versions of some OS X tools
-bi homebrew/dupes/grep
-bi homebrew/dupes/openssh
+# bi homebrew/dupes/grep
+# bi homebrew/dupes/openssh
 
 # Install git
 bi git
@@ -82,8 +82,8 @@ bi vim
 
 # Install tmux
 bi tmux
-bi reattach-to-user-namespace
 brew pin tmux
+bi reattach-to-user-namespace
 
 # Install Midnight Commander
 bi midnight-commander
@@ -110,7 +110,7 @@ bci skype
 bi the_silver_searcher
 
 # Install transmission
-bci --force transmission
+bci transmission
 
 # Install ssh-copy-id
 bi ssh-copy-id
