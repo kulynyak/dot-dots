@@ -1,12 +1,7 @@
 #!/bin/bash
 
 osx() {
-	if ! utils.cmd_exists brew; then
-		ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-	fi
-
 	${PKG_PATH}/lib/brew
-
 	if utils.prompt "This step may modify your OS X system defaults. Continue? (y/n)"; then
 		${PKG_PATH}/lib/osxdefaults
 	fi

@@ -55,9 +55,6 @@ bi vcprompt
 # Install grc
 bi grc
 
-# Install cask
-bi brew-cask
-
 # Install python
 bi python
 bi python3
@@ -90,6 +87,7 @@ bi midnight-commander
 
 # Install google-chrome
 bci google-chrome
+bci chromium
 
 # Install firefox
 bci firefox
