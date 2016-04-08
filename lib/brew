@@ -126,6 +126,9 @@ bci dropbox
 # Google drive
 bci google-drive
 
+# Keyboardmaesro
+bci keyboard-maestro
+
 # Remove outdated versions from the cellar
 brew cleanup
 
