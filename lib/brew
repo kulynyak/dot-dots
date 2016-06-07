@@ -76,6 +76,8 @@ bi unrar
 
 # Install vim
 bi vim
+bi neovim/neovim/neovim
+pip install neovim
 
 # Install tmux
 bi tmux
@@ -112,6 +114,9 @@ bci transmission
 
 # Install ssh-copy-id
 bi ssh-copy-id
+
+#install redshift
+bi redshift
 
 # Terminal
 bci iterm2
