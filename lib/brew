@@ -109,6 +109,9 @@ bci skype
 # Install the_silver_searcher
 bi the_silver_searcher
 
+# msgpack-tools
+brew install https://ludocode.github.io/msgpack-tools.rb
+
 # Install transmission
 bci transmission
 
