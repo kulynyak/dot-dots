@@ -81,7 +81,6 @@ pip install neovim
 
 # Install tmux
 bi tmux
-brew pin tmux
 bi reattach-to-user-namespace
 
 # Install Midnight Commander
@@ -124,10 +123,6 @@ bi redshift
 # Terminal
 bci iterm2
 
-# Seil
-bci seil
-/Applications/Seil.app/Contents/Library/bin/seil set keycode_capslock 80
-
 # Dropbox
 bci dropbox
 
@@ -136,6 +131,7 @@ bci google-drive
 
 # Keyboardmaesro
 bci keyboard-maestro
+bci karabiner-elements
 
 # Remove outdated versions from the cellar
 brew cleanup
