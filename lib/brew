@@ -131,7 +131,12 @@ bci google-drive
 
 # Keyboardmaesro
 bci keyboard-maestro
+
+# Karabiner
 bci karabiner-elements
+
+#Sublime
+bci sublime-text
 
 # Remove outdated versions from the cellar
 brew cleanup
