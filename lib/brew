@@ -143,3 +143,5 @@ brew cleanup
 
 unset -f bci
 unset -f bi
+
+gem install lolcat
